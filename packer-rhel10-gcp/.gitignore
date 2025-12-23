@@ -1,0 +1,15 @@
+# Packer
+output-*/
+*.qcow2
+*.vmdk
+*.log
+
+# Credentials
+*.pkrvars.hcl
+*.tfvars
+*.env
+
+# OS / Editor
+.vscode/
+.idea/
+.DS_Store
