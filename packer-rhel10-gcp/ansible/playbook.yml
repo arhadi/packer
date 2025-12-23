@@ -1,0 +1,20 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install base tools
+      dnf:
+        name:
+          - git
+          - jq
+          - wget
+        state: present
+
+    - name: Enable chrony
+      service:
+        name: chronyd
+        enabled: yes
+        state: started
+
+    - name: Set timezone
+      timezone:
+        name: Asia/Jakarta
